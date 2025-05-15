@@ -1,0 +1,36 @@
+:root {
+  --background-start: #dbeafe; /* Light mode: blue-100 */
+  --background-end: #ede9fe; /* Light mode: purple-100 */
+  --header-bg-start: #3b82f6; /* Light mode: blue-500 */
+  --header-bg-end: #8b5cf6; /* Light mode: purple-500 */
+  --text-color: #1f2937; /* Light mode: gray-800 */
+  --card-bg: #ffffff; /* Light mode: white */
+  --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] {
+  --background-start: #1e293b; /* Dark mode: slate-800 */
+  --background-end: #2e1065; /* Dark mode: violet-950 */
+  --header-bg-start: #1e40af; /* Dark mode: blue-800 */
+  --header-bg-end: #5b21b6; /* Dark mode: purple-800 */
+  --text-color: #e5e7eb; /* Dark mode: gray-200 */
+  --card-bg: #1e293b; /* Dark mode: slate-800 */
+  --shadow-color: rgba(255, 255, 255, 0.1);
+}
+
+body {
+  background: linear-gradient(to bottom right, var(--background-start), var(--background-end));
+  color: var(--text-color);
+  min-height: 100vh;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+header {
+  background: linear-gradient(to right, var(--header-bg-start), var(--header-bg-end));
+}
+
+.card {
+  background: var(--card-bg);
+  box-shadow: 0 4px 6px var(--shadow-color);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
